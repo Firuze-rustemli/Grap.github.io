@@ -1,0 +1,871 @@
+//colors
+$color_log_cabin_approx: #222;
+$white: #fff;
+$color_flush_mahogany_approx: #c0392b;
+$color_totem_pole_approx: #8d1a0d;
+$color_whisper_approx: #f7f7fa;
+$color_flush_mahogany_22_approx: rgba(192, 57, 43, 0.22);
+$black: #000000;
+$color_flame_pea_approx: #da593f;
+$white_15: rgba(255, 255, 255, 0.15);
+$color_prairie_sand_approx: #993025;
+$gray: grey;
+$color_concrete_approx: #f3f3f3;
+//fonts
+$font_0: Open Sans;
+$font_1: sans-serif;
+$font_2: Poppins;
+//@extend-elements
+//#contact .contact form input, #contact .contact form textarea
+%extend_1 {
+	background-color: $white_15;
+	display: block;
+	width: 100%;
+	font-size: 1.3rem;
+	line-height: 16px;
+	padding: 10px 15px;
+	border: none;
+	color: $color_whisper_approx;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: $font_0, $font_1;
+	height: 3000px;
+}
+
+#main {
+	background-size: cover;
+}
+
+#nav-header {
+	background-color: transparent;
+	background-image: none;
+	box-shadow: none;
+	border: none;
+	padding: 20px 0;
+	&.shrink {
+		background-color: $color_log_cabin_approx;
+		height: 80px;
+		padding-top: 10px;
+		transition: all 0.5s;
+	}
+	.navbar-nav>li>a {
+		text-transform: uppercase;
+		font-size: 1.4rem;
+		font-weight: 700;
+		text-shadow: none;
+		color: $white;
+		&.active {
+			color: $color_flush_mahogany_approx;
+		}
+		&:hover {
+			transition: all 0.6s;
+			color: $color_flush_mahogany_approx;
+		}
+	}
+}
+
+// header
+#header-jumbotron {
+	background-color: transparent;
+	height: 640px;
+}
+
+.banner-text {
+	margin-top: 200px;
+	color: $white;
+	.banner-h1 {
+		font-size: 4.8rem;
+		font-weight: 300;
+		margin-bottom: 0;
+		line-height: 1.5;
+	}
+	.banner-p {
+		font-size: 2.2rem;
+		margin-top: 22px;
+		margin-bottom: 0;
+	}
+}
+
+.btn-lg {
+	border: 1px solid $color_flush_mahogany_approx;
+	border-radius: 25px;
+	padding: 13px 32px;
+	text-align: center;
+	white-space: nowrap;
+	letter-spacing: 1.3px;
+	text-transform: uppercase;
+	color: $white;
+	font-size: 1.4rem;
+}
+
+.button-group {
+	margin-top: 34px;
+	.active-btn {
+		background-color: $color_flush_mahogany_approx;
+	}
+}
+
+.btn-border {
+	margin-left: 26px;
+}
+
+.full-image {
+	float: right;
+	position: relative;
+	.image-front {
+		top: 112px;
+		position: relative;
+		left: -28%;
+	}
+	.image-back {
+		position: absolute;
+		top: 85px;
+		left: 17%;
+	}
+}
+
+// section customize
+#customize {
+	padding: 120px 0;
+	.setting {
+		text-align: center;
+		transition: all 0.5s;
+		.intro {
+			font-size: 30px;
+			text-align: center;
+			color: $color_flush_mahogany_approx;
+		}
+		&:hover {
+			border: 1px solid $color_flush_mahogany_approx;
+		}
+		h2.intro-h2 {
+			color: $color_flush_mahogany_approx;
+			font-size: 2.2rem;
+			margin-top: 25px;
+			margin-bottom: 15px;
+		}
+		p.intro-p {
+			font-size: 20px;
+		}
+	}
+}
+
+// section feature
+#feature {
+	background-color: $color_whisper_approx;
+	.title {
+		text-align: center;
+		padding-top: 46px;
+		.feature-h1 {
+			font-size: 4.8rem;
+			font-weight: 300;
+			line-height: 1;
+			margin: 0;
+		}
+		.feature-p {
+			padding: 28px;
+		}
+	}
+	hr {
+		width: 44px;
+		border-top: 1px solid $color_flush_mahogany_approx;
+	}
+	.package {
+		margin-top: 80px;
+		.list {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			.slide-li {
+				margin-bottom: 20px;
+				height: 109px;
+				.box {
+					font-size: 2.5rem;
+					width: 70px;
+					height: 70px;
+					border-radius: 50%;
+					border: 1px solid $color_flush_mahogany_approx;
+					line-height: 68px;
+					text-align: center;
+					color: $color_flush_mahogany_approx;
+					margin-right: 30px;
+					float: left;
+					transition: all 0.3s ease;
+					&:hover {
+						color: $white;
+						background-color: $color_flush_mahogany_approx;
+					}
+				}
+				.content-title {
+					h4.content-h4 {
+						color: $color_flush_mahogany_approx;
+						font-weight: 700;
+					}
+					p.content-p {
+						font-weight: 500;
+					}
+				}
+			}
+		}
+		.photo {
+			text-align: center;
+		}
+	}
+}
+
+// section extra
+#extra {
+	margin-top: 104px;
+	height: 504px;
+	.image-down {
+		left: 24%;
+		position: relative;
+		.img-1-front {
+			position: absolute;
+		}
+		.img-1-back {
+			position: absolute;
+			left: 23%;
+		}
+	}
+	.desc {
+		.list-extra {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			padding-top: 20px;
+			li {
+				padding: 8px;
+				i {
+					font-size: 1.7rem;
+					color: $color_flush_mahogany_approx;
+					margin-right: 10px;
+				}
+				a {
+					font-size: 15px;
+					color: $color_log_cabin_approx;
+					&:hover {
+						text-decoration: none;
+						color: $color_flush_mahogany_approx; //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+						transition: all 0.5s;
+					}
+				}
+			}
+		}
+		h1.desc-title-h1 {
+			text-transform: capitalize;
+			font-size: 4.8rem;
+			font-weight: 300;
+		}
+		p.desc-p {
+			margin-top: 22px;
+			font-size: 17px;
+		}
+	}
+}
+
+// section pricing
+#pricing {
+	margin: 80px;
+	.pricing {
+		.title {
+			text-align: center;
+			.pricing-h1 {
+				font-size: 4.8rem;
+				font-weight: 300;
+				line-height: 1;
+				margin: 0;
+			}
+			.pricing-p {
+				padding: 28px;
+			}
+		}
+		hr {
+			width: 44px;
+			border-top: 1px solid $color_flush_mahogany_approx;
+		}
+		.pricing-table .plans-table {
+			border: 1px solid $color_flush_mahogany_22_approx;
+			text-align: center;
+			transition: all 0.3s ease;
+			.pricing-header {
+				border-top: 10px solid $color_flush_mahogany_22_approx;
+				border-bottom: 1px solid $color_flush_mahogany_22_approx;
+				transition-duration: 0.3s;
+				h1.starter-h1 {
+					padding: 25px 20px;
+					font-size: 2.2rem;
+					font-weight: 700;
+					color: $black;
+					margin: 0;
+				}
+			}
+			.price {
+				font-size: 4.2rem;
+				margin: 0;
+				padding: 34px 20px 28px;
+				font-weight: 700;
+				font-family: $font_2, $font_1;
+				.currency {
+					font-weight: 400;
+					font-size: 2.2rem;
+					vertical-align: baseline;
+				}
+				.pack {
+					font-weight: 400;
+					font-size: 2.2rem;
+					vertical-align: baseline;
+				}
+			}
+			.pricing-list {
+				padding: 0;
+				list-style: none;
+				margin: 0 0 42px;
+				li a {
+					color: $color_log_cabin_approx;
+					line-height: 1.75;
+					font-size: 15px;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+			.btn-sm {
+				color: $color_log_cabin_approx;
+				border: 1px solid $color_totem_pole_approx;
+				padding: 9px 45px;
+				border-radius: 25px;
+				font-size: 15px;
+				&:hover {
+					text-decoration: none;
+					background-color: $color_flush_mahogany_approx;
+					color: $white;
+					transition: all 0.5s ease;
+				}
+			}
+			&:hover {
+				border: 1px solid $color_totem_pole_approx;
+				.pricing-header {
+					border-top: 10px solid $color_totem_pole_approx;
+					border-bottom: 1px solid $color_totem_pole_approx;
+				}
+				.btn-sm {
+					text-decoration: none;
+					background-color: $color_flush_mahogany_approx;
+					color: $white; //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+					transition: all 0.5s ease;
+				}
+			}
+		}
+	}
+}
+
+// section support
+#support {
+	margin: 80px;
+	.support {
+		.title {
+			text-align: center;
+			.support-h1 {
+				font-size: 4.8rem;
+				font-weight: 300;
+				line-height: 1;
+				margin: 0;
+			}
+			.support-p {
+				padding: 28px;
+			}
+		}
+		hr {
+			width: 44px;
+			border-top: 1px solid $color_flush_mahogany_approx;
+		}
+		.app-store {
+			text-align: left;
+			.clear {
+				clear: both;
+			}
+			.store-list {
+				margin-left: 5%;
+				margin-bottom: 100px;
+				ul {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					li {
+						margin-bottom: 0;
+						width: 16.666666%;
+						padding: 0 7px;
+						float: left;
+						&.active-tab {
+							padding: 0;
+							background-color: $color_totem_pole_approx;
+							a {
+								text-decoration: none;
+								i {
+									color: $white;
+								}
+								span {
+									color: $white;
+								}
+								&:hover {
+									i {
+										color: $white;
+									}
+									span {
+										color: $white;
+									}
+								}
+							}
+						}
+						a {
+							border: 1px solid $color_flush_mahogany_approx;
+							border-radius: 0;
+							margin: 0;
+							text-align: center;
+							color: $black;
+							display: block;
+							font-size: 1.4rem;
+							line-height: 1.75;
+							padding: 37px 10px 30px;
+							position: relative;
+							transition: all 0.7s ease;
+							&:hover {
+								text-decoration: none;
+								i {
+									color: $color_totem_pole_approx;
+								}
+								span {
+									color: $color_totem_pole_approx;
+								}
+							}
+							i {
+								font-size: 4rem;
+								line-height: 1;
+								display: block;
+								margin-bottom: 7px;
+							}
+						}
+					}
+				}
+			}
+			.store-content {
+				margin-top: 53px;
+			}
+			.tab-content {
+				display: none;
+			}
+			.active-tab {
+				display: block;
+			}
+		}
+	}
+}
+
+// section testimonals
+#testimonals {
+	color: $white;
+	background: $color_flush_mahogany_approx;
+	text-align: center; // START SLIDER NEXT PREV CSS 
+	.owl-nav {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		.owl-prev {
+			left: 0;
+			position: absolute;
+			border: 1px solid $white;
+			padding: 8px 14px;
+			border-radius: 100%;
+			background-color: $white;
+			color: $color_flame_pea_approx;
+			font-size: 18px;
+		}
+		.owl-next {
+			right: 0;
+			position: absolute;
+			border: 1px solid $white;
+			padding: 8px 14px;
+			border-radius: 100%;
+			background-color: $white;
+			color: $color_flame_pea_approx;
+			font-size: 18px;
+		}
+	}
+	.item {
+		padding: 50px 280px;
+		text-align: center;
+		.card-image {
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin: 0 auto 15px;
+			display: inline-block;
+			text-align: center;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.card-right {
+			margin-top: 20px;
+			h5.client-name {
+				font-size: 2.2rem;
+				font-family: $font_0, $font_1;
+				font-weight: 600;
+				margin: 0;
+				padding: 10px;
+			}
+			p.client-profession {
+				font-size: 1.2rem;
+				margin-top: 4px;
+				margin-bottom: 0;
+			}
+		}
+		.card-description p {
+			font-size: 1.6rem;
+			font-weight: 400;
+			padding: 0;
+			margin: 0;
+			border: none;
+		}
+	}
+}
+
+// section download
+#download {
+	margin: 80px 0;
+	.download {
+		.title {
+			text-align: center;
+			.download-h1 {
+				font-size: 4.8rem;
+				font-weight: 300;
+				line-height: 1;
+				margin: 0;
+			}
+			.download-p {
+				padding: 28px;
+			}
+		}
+		hr {
+			width: 44px;
+			border-top: 1px solid $color_flush_mahogany_approx;
+		}
+		.buttons {
+			margin: 20px;
+			text-align: center;
+			a {
+				color: $white;
+				background-color: $color_flush_mahogany_approx;
+				margin-right: 20px;
+				transition: all 0.5s ease;
+				&:hover {
+					background-color: $color_totem_pole_approx;
+					border-top: 2px solid $color_flush_mahogany_approx;
+				}
+				i {
+					padding-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+// section partner
+#partner {
+	margin: 80px 0;
+	.partner {
+		.title {
+			text-align: center;
+			.partner-h1 {
+				font-size: 4.8rem;
+				font-weight: 300;
+				line-height: 1;
+				margin: 0;
+			}
+			.partner-p {
+				padding: 28px;
+			}
+		}
+		hr {
+			width: 44px;
+			border-top: 1px solid $color_flush_mahogany_approx;
+		}
+		.partner-list ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			li {
+				width: 20%;
+				padding: 15px;
+				position: relative;
+				height: 130px;
+				text-align: center;
+				float: left;
+				a {
+					text-decoration: none;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+// section contact
+#contact {
+	padding: 30px 0;
+	.contact {
+		.us {
+			color: $color_whisper_approx;
+			h1.contact-h1 {
+				font-size: 4.8rem;
+				font-weight: 300;
+				line-height: 1;
+				margin: 0;
+			}
+			p.contact-p {
+				margin-top: 22px;
+				padding: 10px;
+			}
+		}
+		form {
+			position: relative;
+			input {
+				@extend %extend_1;
+			}
+			textarea {
+				@extend %extend_1;
+			}
+			input::placeholder {
+				color: $color_whisper_approx;
+			}
+			textarea::placeholder {
+				color: $color_whisper_approx;
+			}
+			.btn-suubmit {
+				background-color: $color_flush_mahogany_approx;
+				color: $white;
+				font-size: 1.4rem;
+				font-family: $font_0, $font_1;
+				text-transform: uppercase;
+				font-weight: 400;
+				line-height: 39px;
+				padding: 0 39px;
+				letter-spacing: 1.3px;
+				border-radius: 20px;
+				transition: all 0.3s ease;
+				&:hover {
+					border: 1px solid $color_flame_pea_approx;
+					background-color: $color_prairie_sand_approx;
+				}
+			}
+		}
+		.map {
+			color: $color_whisper_approx;
+			#map {
+				width: 100%;
+				height: 400px;
+				background-color: $gray;
+			}
+		}
+	}
+}
+
+// section grap
+#grap {
+	margin: 50px 0;
+	.grap {
+		text-align: center;
+		margin: 0 auto;
+		.social-list {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			margin-top: 30px;
+			li {
+				margin-right: 15px;
+				display: inline-block;
+				a {
+					display: inline-block;
+					height: 40px;
+					width: 40px;
+					border-radius: 50%;
+					line-height: 38px;
+					border: 1px solid $color_flush_mahogany_approx;
+					font-size: 1.4rem;
+					color: $color_flush_mahogany_approx;
+					i {
+						display: inline-block;
+						speak: none;
+						font-weight: normal;
+					}
+					&:hover {
+						border: 1px solid $color_flush_mahogany_approx;
+						background-color: $color_totem_pole_approx;
+						color: $white;
+						transition: all 0.5s ease;
+					}
+				}
+			}
+		}
+	}
+}
+
+// scrollUP css
+#scrollUp {
+	bottom: 20px;
+	right: 20px;
+	padding: 10px 20px;
+	background: $color_flush_mahogany_approx;
+	color: $white;
+	font-size: 25px;
+	border-radius: 100%;
+	opacity: 0.6;
+	font-weight: 600;
+}
+
+// end of scrollUp
+// Page loader css
+#wrapper {
+	display: none;
+}
+
+#loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	width: 150px;
+	height: 150px;
+	margin: -75px 0 0 -75px;
+	border: 16px solid $color_concrete_approx;
+	border-radius: 50%;
+	border-top: 16px solid $color_prairie_sand_approx;
+	width: 120px;
+	height: 120px;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.animate-bottom {
+	position: relative;
+	animation-name: animatebottom;
+	animation-duration: 1s;
+}
+
+@keyframes animatebottom {
+	from {
+		bottom: -100px;
+		opacity: 0;
+	}
+	to {
+		bottom: 0;
+		opacity: 1;
+	}
+}
+
+// end of Page loader css
+ul.nav.backgrounds {
+	border-bottom: 1px solid $white;
+	background-color: $color_log_cabin_approx;
+}
+
+.video-play:hover {
+	border: 1px solid $color_flush_mahogany_approx;
+	background-color: $color_flush_mahogany_approx; //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: 0.5s;
+	color: $white;
+}
+
+.active-btn:hover {
+	border: 1px solid $color_flush_mahogany_approx;
+	background-color: $color_totem_pole_approx; //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 0.5s;
+	color: $white;
+}
+
+// section screenshots
+#screenshots .screen {
+	text-align: center;
+	.screen-h1 {
+		font-size: 4.8rem;
+		font-weight: 300;
+		line-height: 1;
+		margin: 0;
+	}
+	.screen-p {
+		padding: 28px;
+	}
+	hr {
+		width: 44px;
+		border-top: 1px solid $color_flush_mahogany_approx;
+	}
+	.owl-theme {
+		text-align: center;
+		margin-top: 20px;
+		.owl-image {
+			width: 200px;
+			margin-bottom: 50px;
+			img {
+				width: 100%;
+			}
+		}
+		.owl-nav [class*=owl-].slide-dot {
+			color: $white;
+			font-size: 14px;
+			margin: 5px;
+			padding: 4px 12px;
+			background: $color_flush_mahogany_approx;
+			display: inline-block;
+			cursor: pointer;
+			border-radius: 3px;
+		}
+	}
+}
+
+// section footer
+#footer .footer {
+	background-color: $color_totem_pole_approx;
+	.down-footer p {
+		font-size: 1.5rem;
+		color: $white;
+		padding: 20px;
+	}
+	.footer-list ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		text-align: right;
+		line-height: 38px;
+		li {
+			display: inline-block;
+			padding: 11px;
+			a {
+				color: $white;
+				text-decoration: none;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
